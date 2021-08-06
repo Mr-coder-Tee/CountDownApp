@@ -6,7 +6,7 @@ function CountDown() {
     <div className="card">
         <div className="header">
             <h1>Count Down App</h1>
-            <p>count down to my birthday</p>
+            <p>count down to new year</p>
         </div>
         <div className="timer-container">
 
