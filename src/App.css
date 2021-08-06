@@ -150,6 +150,19 @@ small{
   color: #333;
 }
 
+.mySavedDays{
+  margin-left: 100px;
+}
+.mySavedDays ul li{
+ transition: 550ms;
+  margin-top: 5px;
+}
+.mySavedDays ul li:hover{
+  border: 1px solid white;
+  transform: scale(1.1);
+}
+
+
 @media (max-width:700px) {
   .card{
     width: 400px;
@@ -159,9 +172,13 @@ small{
   .card{
     width: 400px;
     transform: rotate(0deg) skew(0deg);
+
   }
   .flex-display{
     flex-direction: column;
+  }
+  .mySavedDays{
+    margin-top: 20px;
   }
 }
 @media (max-width:400px) {
