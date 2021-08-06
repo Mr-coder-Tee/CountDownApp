@@ -48,7 +48,18 @@ function CountDown() {
         };
     });
 
+    const [savedDate,saveDate]=useState([]);
+
+    const setSavedDate=()=>{
+        saveDate([...savedDate,{
+            dayId:saveDate.length,
+            myday: day+" : "+ hour +" : "+minute+" : "+second
+        }])
+    }
+
+
   return (
+      <div className="flex-display">
     <div className="card">
         <div className="header">
             <h1>Count Down App</h1>
@@ -114,8 +125,18 @@ function CountDown() {
         </div>
 
         <div className="button-container">
-            <button className="btn">Save day</button>
+            <button className="btn" onClick={setSavedDate}>Save day</button>
         </div>
+    </div>
+    <div className="mySavedDays">
+            <h5>Saved Count Downs</h5>
+            <ul>
+                {savedDate.map(element=><li key={element.dayId}>{
+                        element.myday
+                    }
+                </li>)}
+            </ul>
+      </div>
     </div>
   );
 }
